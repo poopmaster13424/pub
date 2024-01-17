@@ -1,0 +1,534 @@
+
+	repeat wait() until game:IsLoaded() and game.Players.LocalPlayer.Character do end
+	repeat wait() until game:IsLoaded() and game.Players.LocalPlayer game.Players.LocalPlayer.Character:FindFirstChild("FULLY_LOADED_CHAR") do end
+	
+	coroutine.wrap(function()
+		local bb=game:service'VirtualUser'
+		game:service'Players'.LocalPlayer.Idled:connect(function()
+			bb:CaptureController()
+			bb:ClickButton2(Vector2.new())
+		end)
+	end)()
+	
+	task.spawn(function()
+		repeat wait() until game:IsLoaded() and game.Workspace:FindFirstChild('MAP') do end if game.Workspace:FindFirstChild('MAP') then game.Workspace:FindFirstChild('MAP'):remove() local a=Vector3.new(15,15,15)local b=1;local function c(d,e,f)local g=Instance.new('Part')g.Anchored=true;g.Size=d;g.Position=e;g.Parent=f;return g end;local h=c(Vector3.new(a.X,b,a.Z),Vector3.new(0,-a.Y/2-b/2,0),game.Workspace)local function i(d,e)local j=c(d,e,h)return j end;local k=i(Vector3.new(b,a.Y,a.Z),Vector3.new(-a.X/2+b/2,a.Y/2,0))local l=i(Vector3.new(b,a.Y,a.Z),Vector3.new(a.X/2-b/2,a.Y/2,0))local m=i(Vector3.new(a.X-b*2,a.Y,b),Vector3.new(0,a.Y/2,-a.Z/2+b/2))local n=i(Vector3.new(a.X-b*2,a.Y,b),Vector3.new(0,a.Y/2,a.Z/2-b/2))local function o(d,e)local p=c(d,e,game.Workspace)p.Name='TEST'return p end;local q=o(Vector3.new(15,1,15),Vector3.new(0,0,0))while wait()do local r=game.Players.LocalPlayer;local s=r.Character;if s then local t=s.PrimaryPart;if t then local u=s.Humanoid.HipHeight;h.Position=t.Position-Vector3.new(0,a.Y/2+b/2+u,0)local v=t.Position+Vector3.new(0,-u,0)k.Position=v+Vector3.new(-a.X/2+b/2,0,0)l.Position=v+Vector3.new(a.X/2-b/2,0,0)m.Position=v+Vector3.new(0,0,-a.Z/2+b/2)n.Position=v+Vector3.new(0,0,a.Z/2-b/2)q.Position=t.Position+Vector3.new(0,-(u+1.5),0)end end end                end
+	end)
+	
+	local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
+	
+	coroutine.wrap(function()
+		game.CoreGui.RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+			if child.Name == "ErrorPrompt" then 
+				module:Teleport(game.PlaceId)
+			end 
+		end)
+	
+		game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+			if child.Name == "ErrorPrompt" and child:FindFirstChild("MessageArea") and child.MessageArea:FindFirstChild("ErrorFrame") then
+				module:Teleport(game.PlaceId)
+			end
+		end)
+	end)()
+	
+	local AutoFarmNormalV3 = Instance.new("ScreenGui")
+	local FarmScript = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+	local TitleBar = Instance.new("Frame")
+	local Filler = Instance.new("Frame")
+	local Title = Instance.new("TextLabel")
+	local UICorner_2 = Instance.new("UICorner")
+	local Filler_2 = Instance.new("Frame")
+	local UIStroke = Instance.new("UIStroke")
+	local UIStroke_2 = Instance.new("UIStroke")
+	local User = Instance.new("TextLabel")
+	local Divider = Instance.new("TextLabel")
+	local Time = Instance.new("TextLabel")
+	local Broken = Instance.new("TextLabel")
+	local MoneyTotal = Instance.new("TextLabel")
+	local MoneyPM = Instance.new("TextLabel")
+	local StatusBar = Instance.new("Frame")
+	local Status = Instance.new("TextLabel")
+	local UICorner_3 = Instance.new("UICorner")
+	local UIStroke_3 = Instance.new("UIStroke")
+	local MoneyPH = Instance.new("TextLabel")
+	
+	AutoFarmNormalV3.Name = "AutoFarm Normal V3"
+	AutoFarmNormalV3.Parent = game.CoreGui
+	AutoFarmNormalV3.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	AutoFarmNormalV3.DisplayOrder = 999999998
+	AutoFarmNormalV3.ResetOnSpawn = false
+	
+	FarmScript.Name = "FarmScript"
+	FarmScript.Parent = AutoFarmNormalV3
+	FarmScript.AnchorPoint = Vector2.new(0.5, 0.5)
+	FarmScript.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	FarmScript.BackgroundTransparency = 1.000
+	FarmScript.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	FarmScript.Position = UDim2.new(0.499824286, 0, 0.499009162, 0)
+	FarmScript.Size = UDim2.new(0.879128575, 0, 0.579701722, 0)
+	
+	UICorner.CornerRadius = UDim.new(0.00999999978, 0)
+	UICorner.Parent = FarmScript
+	
+	UIAspectRatioConstraint.Parent = FarmScript
+	UIAspectRatioConstraint.AspectRatio = 2.000
+	
+	TitleBar.Name = "TitleBar"
+	TitleBar.Parent = FarmScript
+	TitleBar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	TitleBar.BackgroundTransparency = 1.000
+	TitleBar.BorderSizePixel = 0
+	TitleBar.Size = UDim2.new(1, 0, 0.379143327, 0)
+	
+	Filler.Name = "Filler"
+	Filler.Parent = TitleBar
+	Filler.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	Filler.BackgroundTransparency = 1.000
+	Filler.BorderSizePixel = 0
+	Filler.Position = UDim2.new(0, 0, 0.75999999, 0)
+	Filler.Size = UDim2.new(1, 0, 0.239999995, 0)
+	
+	Title.Name = "Title"
+	Title.Parent = TitleBar
+	Title.AnchorPoint = Vector2.new(0.5, 0.5)
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Position = UDim2.new(0.5, 0, 0.5, 0)
+	Title.Size = UDim2.new(1, 0, 0.610000014, 0)
+	Title.Font = Enum.Font.GothamBold
+	Title.Text = "DH | .gg/altctrl"
+	Title.TextColor3 = Color3.fromRGB(172, 190, 255)
+	Title.TextScaled = true
+	Title.TextSize = 14.000
+	Title.TextWrapped = true
+	
+	UICorner_2.CornerRadius = UDim.new(0.0500000007, 0)
+	UICorner_2.Parent = TitleBar
+	
+	Filler_2.Name = "Filler"
+	Filler_2.Parent = TitleBar
+	Filler_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	Filler_2.BackgroundTransparency = 1.000
+	Filler_2.BorderSizePixel = 0
+	Filler_2.Position = UDim2.new(0, 0, -0.00525726238, 0)
+	Filler_2.Size = UDim2.new(1, 0, 0.918296635, 0)
+	
+	UIStroke.Parent = Filler_2
+	UIStroke.Color = Color3.fromRGB(172, 190, 255)
+	UIStroke.Thickness = 3
+	
+	UIStroke_2.Parent = FarmScript
+	UIStroke_2.Color = Color3.fromRGB(172, 190, 255)
+	UIStroke_2.Thickness = 4
+	
+	User.Name = "User"
+	User.Parent = FarmScript
+	User.AnchorPoint = Vector2.new(0.5, 0.5)
+	User.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	User.BackgroundTransparency = 1.000
+	User.Position = UDim2.new(0.501144886, 0, 0.429934651, 0)
+	User.Size = UDim2.new(0.272007853, 0, 0.0658236444, 0)
+	User.Font = Enum.Font.Gotham
+	User.Text = "User: ROBLOX"
+	User.TextColor3 = Color3.fromRGB(255, 255, 255)
+	User.TextScaled = true
+	User.TextSize = 14.000
+	User.TextWrapped = true
+	
+	Divider.Name = "Divider"
+	Divider.Parent = FarmScript
+	Divider.AnchorPoint = Vector2.new(0.5, 0.5)
+	Divider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Divider.BorderSizePixel = 0
+	Divider.Position = UDim2.new(0.498661309, 0, 0.795589566, 0)
+	Divider.Size = UDim2.new(0.272007853, 0, 0.0183458738, 0)
+	Divider.Visible = false
+	Divider.Font = Enum.Font.Gotham
+	Divider.Text = "Time: 20:00:00"
+	Divider.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Divider.TextScaled = true
+	Divider.TextSize = 14.000
+	Divider.TextWrapped = true
+	
+	Time.Name = "Time"
+	Time.Parent = FarmScript
+	Time.AnchorPoint = Vector2.new(0.5, 0.5)
+	Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Time.BackgroundTransparency = 1.000
+	Time.Position = UDim2.new(0.501144886, 0, 0.512009978, 0)
+	Time.Size = UDim2.new(0.272007853, 0, 0.0658236444, 0)
+	Time.Font = Enum.Font.Gotham
+	Time.Text = "Time: 00:00:00"
+	Time.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Time.TextScaled = true
+	Time.TextSize = 14.000
+	Time.TextWrapped = true
+	
+	Broken.Name = "Broken"
+	Broken.Parent = FarmScript
+	Broken.AnchorPoint = Vector2.new(0.5, 0.5)
+	Broken.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Broken.BackgroundTransparency = 1.000
+	Broken.Position = UDim2.new(0.501144886, 0, 0.59490639, 0)
+	Broken.Size = UDim2.new(0.272007853, 0, 0.0658236444, 0)
+	Broken.Font = Enum.Font.Gotham
+	Broken.Text = "ATMS: 0"
+	Broken.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Broken.TextScaled = true
+	Broken.TextSize = 14.000
+	Broken.TextWrapped = true
+	
+	MoneyTotal.Name = "MoneyTotal"
+	MoneyTotal.Parent = FarmScript
+	MoneyTotal.AnchorPoint = Vector2.new(0.5, 0.5)
+	MoneyTotal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	MoneyTotal.BackgroundTransparency = 1.000
+	MoneyTotal.Position = UDim2.new(0.501144886, 0, 0.674381673, 0)
+	MoneyTotal.Size = UDim2.new(0.272007853, 0, 0.0658236444, 0)
+	MoneyTotal.Font = Enum.Font.Gotham
+	MoneyTotal.Text = "Collected: $0"
+	MoneyTotal.TextColor3 = Color3.fromRGB(255, 255, 255)
+	MoneyTotal.TextScaled = true
+	MoneyTotal.TextSize = 14.000
+	MoneyTotal.TextWrapped = true
+	
+	MoneyPM.Name = "MoneyPM"
+	MoneyPM.Parent = FarmScript
+	MoneyPM.AnchorPoint = Vector2.new(0.5, 0.5)
+	MoneyPM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	MoneyPM.BackgroundTransparency = 1.000
+	MoneyPM.Position = UDim2.new(0.501144886, 0, 0.753856957, 0)
+	MoneyPM.Size = UDim2.new(0.272007853, 0, 0.0658236444, 0)
+	MoneyPM.Font = Enum.Font.Gotham
+	MoneyPM.Text = "Per Miniute: $0"
+	MoneyPM.TextColor3 = Color3.fromRGB(255, 255, 255)
+	MoneyPM.TextScaled = true
+	MoneyPM.TextSize = 14.000
+	MoneyPM.TextWrapped = true
+	
+	StatusBar.Name = "StatusBar"
+	StatusBar.Parent = FarmScript
+	StatusBar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	StatusBar.BackgroundTransparency = 1.000
+	StatusBar.BorderSizePixel = 0
+	StatusBar.Position = UDim2.new(0.36292851, 0, 0.887345731, 0)
+	StatusBar.Size = UDim2.new(0.272996902, 0, 0.0857823938, 0)
+	
+	Status.Name = "Status"
+	Status.Parent = StatusBar
+	Status.AnchorPoint = Vector2.new(0.5, 0.5)
+	Status.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	Status.BackgroundTransparency = 1.000
+	Status.BorderSizePixel = 0
+	Status.Position = UDim2.new(0.497639835, 0, 0.485926151, 0)
+	Status.Size = UDim2.new(0.495723575, 0, -0.505347669, 0)
+	Status.ZIndex = 3
+	Status.Font = Enum.Font.Gotham
+	Status.Text = "Enabled | Fist | V3"
+	Status.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Status.TextScaled = true
+	Status.TextSize = 14.000
+	Status.TextWrapped = true
+	
+	UICorner_3.CornerRadius = UDim.new(0.100000001, 0)
+	UICorner_3.Parent = StatusBar
+	
+	UIStroke_3.Parent = StatusBar
+	UIStroke_3.Color = Color3.fromRGB(172, 190, 255)
+	UIStroke_3.Thickness = 3
+	
+	MoneyPH.Name = "MoneyPH"
+	MoneyPH.Parent = FarmScript
+	MoneyPH.AnchorPoint = Vector2.new(0.5, 0.5)
+	MoneyPH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	MoneyPH.BackgroundTransparency = 1.000
+	MoneyPH.Position = UDim2.new(0.501144886, 0, 0.837049663, 0)
+	MoneyPH.Size = UDim2.new(0.272007853, 0, 0.0658236444, 0)
+	MoneyPH.Font = Enum.Font.Gotham
+	MoneyPH.Text = "Per Hour: $0"
+	MoneyPH.TextColor3 = Color3.fromRGB(255, 255, 255)
+	MoneyPH.TextScaled = true
+	MoneyPH.TextSize = 14.000
+	MoneyPH.TextWrapped = true
+	
+	local function RSLK_flamewashere_script() -- User.LocalScript 
+		local script = Instance.new('LocalScript', User)
+	
+		repeat wait() until game:IsLoaded() and game.Players and game.Players.LocalPlayer do end
+		
+		script.Parent.Text = "User: "..tostring(game.Players.LocalPlayer.Name)
+	end
+	coroutine.wrap(RSLK_flamewashere_script)()
+	local function KAEW_flamewashere_script() -- Time.LocalScript 
+		local script = Instance.new('LocalScript', Time)
+	
+		if not getgenv().startTime then
+			getgenv().startTime = 0
+		else
+			local TempstartTime = tonumber(getgenv().startTime)
+			getgenv().startTime = tonumber(TempstartTime)
+		end
+		
+		function formatTime(timeInSeconds)
+			local minutes = math.floor(timeInSeconds / 60)
+			local seconds = timeInSeconds % 60
+			local hours = math.floor(minutes / 60)
+			minutes = minutes % 60
+			return string.format("%02d:%02d:%02d", hours, minutes, seconds)
+		end
+		
+		function updateTimer()
+			getgenv().startTime = getgenv().startTime + 1
+			script.Parent.Text = "Time: "..tostring(formatTime(getgenv().startTime))
+		end
+		
+		while true do
+			wait(1)
+			updateTimer()
+		end
+	end
+	coroutine.wrap(KAEW_flamewashere_script)()
+	local function KEWQG_flamewashere_script() -- Broken.v3 | AUTOFARM 
+		local script = Instance.new('LocalScript', Broken)
+	
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer.Character do end
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer game.Players.LocalPlayer.Character:FindFirstChild("FULLY_LOADED_CHAR") do end
+		
+		coroutine.wrap(function()
+			local bb=game:service'VirtualUser'
+			game:service'Players'.LocalPlayer.Idled:connect(function()
+				bb:CaptureController()
+				bb:ClickButton2(Vector2.new())
+			end)
+		end)()
+		
+		settings().Rendering.QualityLevel = 1
+		UserSettings().GameSettings.MasterVolume = 0
+		settings().Physics.PhysicsEnvironmentalThrottle = 1
+		UserSettings():GetService("UserGameSettings").MasterVolume = 0
+		
+		local lplr = game.Players.LocalPlayer
+		local CurrentATM
+		
+		if not getgenv().ATMBREAK then
+			getgenv().ATMBREAK = 0
+		else
+			local TempATMBREAK = tonumber(getgenv().ATMBREAK)
+			getgenv().ATMBREAK = tonumber(TempATMBREAK)
+			script.Parent.Text = "ATMS: "..tostring(getgenv().ATMBREAK)
+		end
+		
+		if not getgenv().CurrentAmount then
+			getgenv().CurrentAmount = 0
+		else
+			local TempCurrentAmount = tonumber(getgenv().CurrentAmount)
+			getgenv().CurrentAmount = tonumber(TempCurrentAmount)
+		end
+		
+		if not getgenv().CollectedData then
+			getgenv().CollectedData = {}
+		else
+			local TempCollectedData = game.HttpService:JSONDecode(getgenv().CollectedData)
+			getgenv().CollectedData = TempCollectedData
+		end
+		
+		-- Temp
+		if not getgenv().PerMiniuteCash then
+			getgenv().PerMiniuteCash = {}
+		else
+			local TempPerMiniuteCash = game.HttpService:JSONDecode(getgenv().PerMiniuteCash)
+			getgenv().PerMiniuteCash = TempPerMiniuteCash
+		end
+		
+		if not getgenv().PerHourCash then
+			getgenv().PerHourCash = {}
+		else
+			local TempPerHourCash = game.HttpService:JSONDecode(getgenv().PerHourCash)
+			getgenv().PerHourCash = TempPerHourCash
+		end
+		
+		-- Average
+		if not getgenv().PerMiniuteCashAvg then
+			getgenv().PerMiniuteCashAvg = {}
+		else
+			local TempPerMiniuteCashAvg = game.HttpService:JSONDecode(getgenv().PerMiniuteCashAvg)
+			getgenv().PerMiniuteCashAvg = TempPerMiniuteCashAvg
+		end
+		
+		if not getgenv().PerHourCashAvg then
+			getgenv().PerHourCashAvg = {}
+		else
+			local TempPerHourCashAvg = game.HttpService:JSONDecode(getgenv().PerHourCashAvg)
+			getgenv().PerHourCashAvg = TempPerHourCashAvg
+			
+		end
+		
+		local function format(v) --[ >> ] help from --> http://lua-users.org/wiki/FormattingNumbers
+			local l,n,r = string.match(v, '^([^%d]*%d)(%d*)(.-)$')
+			return '$'..l..(n:reverse():gsub('(%d%d%d)', '%1,'):reverse())..r
+		end
+		
+		local function encodeData(array)
+			return game.HttpService:JSONEncode(array)
+		end
+		
+		function CheckInvicCash(v)
+			local check1 = Vector3.new(-627.598, 22.85, -286.658)
+			local check2 = Vector3.new(-624.598, 22.85, -286.658)
+			local distance1 = (v.Position - check1).magnitude
+			local distance2 = (v.Position - check2).magnitude
+		
+			if distance1 <= 1 or distance2 <= 1 then
+				return true
+			end
+			return false
+		end
+		
+		function CheckDistance(v, p)
+			local check1 = p.Position
+			local distance1 = (v.Position - check1).magnitude
+		
+			if distance1 <= 5 then
+				return true
+			end
+			return false
+		end
+	
+		task.spawn(function()
+			queue_on_teleport("getgenv().ATMBREAK = '"..tostring(getgenv().ATMBREAK).."';getgenv().CurrentAmount = '"..tostring(getgenv().CurrentAmount).."';getgenv().CollectedData = '"..encodeData(getgenv().CollectedData).."';getgenv().PerMiniuteCash = '"..encodeData(getgenv().PerMiniuteCash).."';getgenv().PerHourCash = '"..encodeData(getgenv().PerHourCash).."';getgenv().PerMiniuteCashAvg = '"..encodeData(getgenv().PerMiniuteCashAvg).."';getgenv().PerHourCashAvg = '"..encodeData(getgenv().PerHourCashAvg).."';getgenv().startTime = '"..tostring(getgenv().startTime).."';print('Session Loaded')")
+			queue_on_teleport("repeat wait() until game:IsLoaded() and game.Workspace:FindFirstChild('MAP') do end if game.Workspace:FindFirstChild('MAP') then game.Workspace:FindFirstChild('MAP'):remove() local a=Vector3.new(15,15,15)local b=1;local function c(d,e,f)local g=Instance.new('Part')g.Anchored=true;g.Size=d;g.Position=e;g.Parent=f;return g end;local h=c(Vector3.new(a.X,b,a.Z),Vector3.new(0,-a.Y/2-b/2,0),game.Workspace)local function i(d,e)local j=c(d,e,h)return j end;local k=i(Vector3.new(b,a.Y,a.Z),Vector3.new(-a.X/2+b/2,a.Y/2,0))local l=i(Vector3.new(b,a.Y,a.Z),Vector3.new(a.X/2-b/2,a.Y/2,0))local m=i(Vector3.new(a.X-b*2,a.Y,b),Vector3.new(0,a.Y/2,-a.Z/2+b/2))local n=i(Vector3.new(a.X-b*2,a.Y,b),Vector3.new(0,a.Y/2,a.Z/2-b/2))local function o(d,e)local p=c(d,e,game.Workspace)p.Name='TEST'return p end;local q=o(Vector3.new(15,1,15),Vector3.new(0,0,0))while wait()do local r=game.Players.LocalPlayer;local s=r.Character;if s then local t=s.PrimaryPart;if t then local u=s.Humanoid.HipHeight;h.Position=t.Position-Vector3.new(0,a.Y/2+b/2+u,0)local v=t.Position+Vector3.new(0,-u,0)k.Position=v+Vector3.new(-a.X/2+b/2,0,0)l.Position=v+Vector3.new(a.X/2-b/2,0,0)m.Position=v+Vector3.new(0,0,-a.Z/2+b/2)n.Position=v+Vector3.new(0,0,a.Z/2-b/2)q.Position=t.Position+Vector3.new(0,-(u+1.5),0)end end end                end")
+		end)
+	
+		task.spawn(function()
+			local mt = getrawmetatable(game)
+			local old = mt.__namecall
+			setreadonly(mt, false)
+			mt.__namecall = newcclosure(function(...)
+				local args = {...}
+				if CurrentATM and CurrentATM ~= nil and CurrentATM.Parent ~= nil and getnamecallmethod() == "FireServer" and args[2] == "UpdateMousePos" then
+					args[3] = CurrentATM.Position
+					return old(unpack(args))
+				end
+				return old(...)
+			end)
+		end)
+		
+		task.spawn(function()
+			while wait() do
+				repeat wait() until game:IsLoaded() and game.Players.LocalPlayer game.Players.LocalPlayer.Character:FindFirstChild("FULLY_LOADED_CHAR") do end
+				for _, v in pairs(game.Workspace.Cashiers:GetChildren()) do
+					if v and v:FindFirstChild('Open') and not CheckInvicCash(v.Open) then
+						if v:FindFirstChild('Humanoid') and v.Humanoid.Health >= 0 then
+							pcall(function()
+								if game.Players.LocalPlayer.Backpack:FindFirstChild('Combat') then
+									lplr.Character.Humanoid:EquipTool(lplr.Backpack:FindFirstChild('Combat'))
+								elseif game.Players.LocalPlayer.Character:FindFirstChild('Combat') then else
+									repeat wait() until game:IsLoaded() and game.Players.LocalPlayer game.Players.LocalPlayer.Character:FindFirstChild("FULLY_LOADED_CHAR") do end
+									lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Dead)
+								end
+							end)
+							CurrentATM = v.Open
+							game.Players.LocalPlayer.Character.PrimaryPart.CFrame = (v.Open.CFrame * CFrame.new(0,0,-1)) - Vector3.new(0, game.Players.LocalPlayer.Character.Humanoid.HipHeight-20, 0)
+							wait(0.85)
+							for _, stuff in pairs(v:GetChildren()) do
+								if stuff.Name == "Humanoid" or stuff.Name == "Open" then else
+									stuff:remove()
+								end
+							end
+							repeat wait()
+								game.Players.LocalPlayer.Character.PrimaryPart.CFrame = (v.Open.CFrame * CFrame.new(0,0,-1)) - Vector3.new(0, game.Players.LocalPlayer.Character.Humanoid.HipHeight, 0)
+								if game.Players.LocalPlayer.Character:FindFirstChild('Combat') then
+									--task.spawn(function()
+										--wait(1)
+										game.Players.LocalPlayer.Character:FindFirstChild('Combat'):Activate()
+									--end)
+								end
+							until not v:FindFirstChild('Humanoid') or v.Humanoid.Health <= 0 do end
+							wait(0.3)
+							repeat wait()
+								local moneyData
+								for i, money in ipairs(game.Workspace.Ignored.Drop:GetChildren()) do
+									if money and money ~= nil and money.Name == "MoneyDrop" and money:FindFirstChild('ClickDetector') and (money.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 20 then
+										moneyData = money
+										local MoneyAmount = tonumber((money.BillboardGui.TextLabel.Text:gsub("[^%w%s_]+", "")):split(" ")[1])
+										if not table.find(getgenv().CollectedData, money) then
+											getgenv().CurrentAmount = getgenv().CurrentAmount + MoneyAmount
+											table.insert(getgenv().CollectedData, money)
+											table.insert(getgenv().PerMiniuteCash, MoneyAmount)
+											table.insert(getgenv().PerHourCash, MoneyAmount)
+										end
+										--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = money.CFrame + Vector3.new(3, 3, 3)
+										--repeat wait()
+											if money and money:FindFirstChild('ClickDetector')  and (money.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 20 then
+												fireclickdetector(money.ClickDetector)
+												--wait()
+											--else
+												--break
+											end
+										--until not money or money == nil or not money:FindFirstChild('ClickDetector') or (money.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 19 do end
+										script.Parent.Parent.MoneyTotal.Text = "Collected: "..tostring(format(getgenv().CurrentAmount))
+									end
+								end
+							until not moneyData or moneyData == nil do end
+							ATMBREAK = ATMBREAK + 1
+							script.Parent.Text = "ATMS: "..tostring(ATMBREAK)
+						end
+					end
+				end
+		
+				--------------------------------------
+				if (function()
+						for _, v in pairs(game.Workspace.Cashiers:GetChildren()) do
+							if v and v:FindFirstChild('Open') and not CheckInvicCash(v.Open) then
+								if v:FindFirstChild('Humanoid') and v.Humanoid.Health >= 0 then
+									return true
+								end
+							end
+						end
+					end)() then else
+						--queue_on_teleport("getgenv().ATMBREAK = '"..tostring(getgenv().ATMBREAK).."';getgenv().CurrentAmount = '"..tostring(getgenv().CurrentAmount).."';getgenv().CollectedData = '"..encodeData(getgenv().CollectedData).."';getgenv().PerMiniuteCash = '"..encodeData(getgenv().PerMiniuteCash).."';getgenv().PerHourCash = '"..encodeData(getgenv().PerHourCash).."';getgenv().PerMiniuteCashAvg = '"..encodeData(getgenv().PerMiniuteCashAvg).."';getgenv().PerHourCashAvg = '"..encodeData(getgenv().PerHourCashAvg).."';getgenv().startTime = '"..tostring(getgenv().startTime).."';print('Session Loaded')")
+						--queue_on_teleport("repeat wait() until game:IsLoaded() and game.Workspace:FindFirstChild('MAP') do end if game.Workspace:FindFirstChild('MAP') then game.Workspace:FindFirstChild('MAP'):remove() local a=Vector3.new(15,15,15)local b=1;local function c(d,e,f)local g=Instance.new('Part')g.Anchored=true;g.Size=d;g.Position=e;g.Parent=f;return g end;local h=c(Vector3.new(a.X,b,a.Z),Vector3.new(0,-a.Y/2-b/2,0),game.Workspace)local function i(d,e)local j=c(d,e,h)return j end;local k=i(Vector3.new(b,a.Y,a.Z),Vector3.new(-a.X/2+b/2,a.Y/2,0))local l=i(Vector3.new(b,a.Y,a.Z),Vector3.new(a.X/2-b/2,a.Y/2,0))local m=i(Vector3.new(a.X-b*2,a.Y,b),Vector3.new(0,a.Y/2,-a.Z/2+b/2))local n=i(Vector3.new(a.X-b*2,a.Y,b),Vector3.new(0,a.Y/2,a.Z/2-b/2))local function o(d,e)local p=c(d,e,game.Workspace)p.Name='TEST'return p end;local q=o(Vector3.new(15,1,15),Vector3.new(0,0,0))while wait()do local r=game.Players.LocalPlayer;local s=r.Character;if s then local t=s.PrimaryPart;if t then local u=s.Humanoid.HipHeight;h.Position=t.Position-Vector3.new(0,a.Y/2+b/2+u,0)local v=t.Position+Vector3.new(0,-u,0)k.Position=v+Vector3.new(-a.X/2+b/2,0,0)l.Position=v+Vector3.new(a.X/2-b/2,0,0)m.Position=v+Vector3.new(0,0,-a.Z/2+b/2)n.Position=v+Vector3.new(0,0,a.Z/2-b/2)q.Position=t.Position+Vector3.new(0,-(u+1.5),0)end end end                end")
+						module:Teleport(game.PlaceId)
+				end
+				-------------------------------------------------------
+			end
+		end)
+	
+		
+		if getgenv().CurrentAmount then
+			script.Parent.Parent.MoneyTotal.Text = "Collected: "..tostring(format(getgenv().CurrentAmount))
+		end
+	end
+	coroutine.wrap(KEWQG_flamewashere_script)()
+	local function TCLZJA_flamewashere_script() -- AutoFarmNormalV3.AC_Bypass 
+		local script = Instance.new('LocalScript', AutoFarmNormalV3)
+	
+		local names = {
+			"TeleportDetect",
+			"OneMoreTime",
+			"CHECKER_1",
+			"Kick",
+			"BreathingHAMON",
+			"BR_KICKPC",
+			"KICKREMOTE",
+			"CHECKER",
+			"PERMAIDBAN",
+			"checkingSPEED",
+			"GUI_CHECK",
+			"BANREMOTE",
+		}
+		
+		local old
+		old = hookmetamethod(game, "__namecall", function(...)
+			local args = {...}
+			local namecallmethod = getnamecallmethod()
+			if namecallmethod == "FireServer" and args[1] == game.ReplicatedStorage.MainEvent then
+				if table.find(names, args[2]) then
+					return ''
+				end
+			end
+			return old(...)
+		end)
+	end
+	coroutine.wrap(TCLZJA_flamewashere_script)()
